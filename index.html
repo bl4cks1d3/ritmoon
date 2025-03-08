@@ -51,7 +51,11 @@
 				<link href="css/colors/purple-theme.css" rel="alternate stylesheet" title="purple-theme">
 				<link href="css/colors/skyblue-theme.css" rel="alternate stylesheet" title="skyblue-theme">	
 				<link href="css/colors/red-theme.css" rel="alternate stylesheet" title="red-theme">	
-				<link href="css/colors/violet-theme.css" rel="alternate stylesheet" title="violet-theme">	
+				<link href="css/colors/violet-theme.css" rel="alternate stylesheet" title="violet-theme">
+				  <!-- FullCalendar JS -->
+			<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/pt-br.js"></script>	
+			<link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
             </head>
             <body>
                <!-- PRELOADER SPINNER
@@ -513,25 +517,30 @@
                                     <div class="txt-block left-column wow fadeInRight">
                                        <!-- Section ID -->	
                                        <span class="section-id block !text-[0.85rem] leading-none font-bold tracking-[0.5px] uppercase mb-[35px] lg:text-[0.85rem] lg:mb-[30px] md:mb-[25px] sm:mb-[25px] font-Jakarta">From Good to Great</span>
-                                       <!-- Title -->	
+                                       <!-- Title -->
+									   <div id="currentPhaseBanner"></div>
                                        <h2 class="s-46 w-700 text-[2.875rem] lg:text-[2.625rem] md:text-[2.35294rem] sm:text-[2.25rem] xsm:text-[1.8125rem] font-bold leading-[1.25] font-Jakarta sm:leading-[1.35] xsm:leading-[1.35] mb-[26px] lg:mb-[20px] md:mb-[15px] sm:mb-[20px] xsm:mb-[15px]">Scale your unique design process</h2>
                                        <!-- Text -->	
-                                       <p>Sodales tempor sapien quaerat congue eget ipsum laoreet turpis neque auctor 
-                                          vitae eros dolor luctus placerat magna ligula cursus and purus pretium
-                                       </p>
-                                       <!-- Small Title -->	
-                                       <h5 class="s-24 w-700 h5-title text-[1.5rem] lg:text-[1.375rem] md:text-[1.470588rem] sm:text-[1.625rem] xsm:text-[1.4375rem] font-bold leading-[1.35] font-Jakarta sm:leading-[1.4] xsm:leading-[1.4] my-[20px] lg:my-[18px] md:my-[18px] sm:my-[18px]">Every pixel counts</h5>
-                                       <!-- Text -->	
-                                       <p class=" mb-0 ">Sapien tempor sodales quaerat ipsum undo congue laoreet turpis neque 
-                                          auctor turpis vitae dolor luctus placerat magna and ligula cursus purus vitae
-                                       </p>
+                                       <form id="cycleForm" class="mb-4">
+										<div class="form-row">
+										  <div class="form-group col-md-6">
+											<label for="lastPeriod">Data da última menstruação:</label>
+											<input type="date" id="lastPeriod" class="form-control"   required>
+										  </div>
+										  <div class="form-group col-md-6">
+											<label for="menstruationDuration">Duração da menstruação (dias):</label>
+											<input type="number" id="menstruationDuration" class="form-control" min="1" required>
+										  </div>
+										</div>
+										<button type="submit" class="btn btn--theme hover--theme !h-[54px] !text-[0.925rem] !px-[1.3rem] !py-[0.7rem] lg:!h-[50px] lg:!text-[0.925rem] lg:!px-[1.3rem] lg:!py-[0.7rem] md:!h-[46px] md:!text-[1.0625rem] md:!px-[1.3rem] md:!py-[0.7rem] sm:!h-[54px] sm:!text-[1.0625rem] xsm:!h-[54px] xsm:!text-[1.0625rem]">Gerar Calendário</button>
+									  </form>
                                     </div>
                                  </div>
                                  <!-- END TEXT BLOCK -->	
                                  <!-- IMAGE BLOCK -->
                                  <div class="md:w-6/12 lg:w-6/12 xl:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full order-first order-md-2 md:order-2 lg:order-2 xl:order-2">
                                     <div class="img-block text-center right-column wow fadeInLeft pl-[10px] lg:pl-[10px] md:pl-0">
-                                       <img class="img-fluid" src="images/img-10.png" alt="content-image">
+										<div id="calendar"></div>	
                                     </div>
                                  </div>
                               </div>
@@ -543,6 +552,8 @@
                      </div>
                      <!-- End container -->	
                   </section>
+				  
+				  
                   <!-- END BOX CONTENT -->
                   <!-- TEXT CONTENT
                      ============================================= -->
@@ -1918,6 +1929,7 @@
 			  <script src="js/wow.js"></script>
 			  <!-- Custom Script -->		
 			  <script src="js/custom.js"></script>
+			  <script src="js/cycle.js"></script>
 			  <script>
 				 
 			  </script>
@@ -1957,6 +1969,8 @@
 				 </script>
 				 -->	
 			  <script src="js/changer.js"></script>
-			  <script defer="" src="js/styleswitch.js"></script>	
+			  <script defer="" src="js/styleswitch.js"></script>
+			  
+				
 		   
 		</body></html>

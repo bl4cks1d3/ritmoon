@@ -21,7 +21,7 @@
 			
 		setTimeout(function () {
 		    $(".modal:not(.auto-off)").modal("show");
-		},3600);
+		},13600);
 				
 	});
 
