@@ -141,7 +141,7 @@ function addDays(date, days) {
 	calendarEl.innerHTML = "";
 	
 	var calendar = new FullCalendar.Calendar(calendarEl, {
-	  themeSystem: 'bootstra',
+	  themeSystem: 'bootstrap5',
 	  locale: 'pt-br',
 	  initialView: 'dayGridMonth',
 	  events: events,

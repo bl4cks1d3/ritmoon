@@ -37667,6 +37667,33 @@ body.theme--dark {
   }
 }
 
+.phase-banner {
+  color: white;
+  padding: 20px;
+  border-radius: 5%;
+  margin-bottom: 10px
+}
+
+.fc-prev-button {
+  background-color: #007bff !important; /* Cor azul padrão do Bootstrap */
+  padding: 10px 15px;
+  margin: 10px;
+  color: white !important;
+}
+
+.fc-next-button {
+  background-color: #007bff !important; /* Cor azul padrão do Bootstrap */
+  padding: 10px 15px;
+  margin: 10px;
+  color: white !important;
+}
+
+
+.fc-today-button:hover {
+  background-color: #0056b3 !important; /* Cor azul escuro ao passar o mouse */
+  border-color: #004085 !important;
+}
+
 @media (min-width: 414px) and (max-width: 479.98px) {
   .xsm\:relative {
     position: relative;
