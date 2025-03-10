@@ -314,7 +314,7 @@
 
 		/*----------------------------------------------------*/
 		/*	Newsletter Subscribe Form
-		/*----------------------------------------------------*/
+		/*----------------------------------------------------
 	
 		$('.newsletter-form').ajaxChimp({
         language: 'cm',
@@ -332,5 +332,6 @@
 			5: 'This email address looks fake or invalid. Please enter a real email address'
 		};	
 
+		*/
 
 	});

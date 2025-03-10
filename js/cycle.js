@@ -159,3 +159,27 @@ function addDays(date, days) {
 	
 	calendar.render();
   });
+  
+  function enviarEmail() {
+	const email = document.getElementById('s-email').value;
+
+	// Criar um objeto XMLHttpRequest
+	const xhr = new XMLHttpRequest();
+
+	// Configurar a requisição GET
+	xhr.open('GET', `mail.php?email=${encodeURIComponent(email)}`, true);
+
+	// Definir o que fazer quando a resposta for recebida
+	xhr.onload = function() {
+		if (xhr.status >= 200 && xhr.status < 300) {
+			// Requisição bem-sucedida
+			console.log("deu certo")
+		} else {
+			// Requisição falhou
+			console.log("deu errado")
+		}
+	};
+
+	// Enviar a requisição
+	xhr.send();
+}
