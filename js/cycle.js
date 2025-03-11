@@ -168,7 +168,7 @@ function addDays(date, days) {
 
 	xhr.onload = function() {
 		if (xhr.status >= 200 && xhr.status < 300) {
-			$(".modal:not(.auto-off)").modal("show");
+			alert("Obrigada pela sua participação")
 		} 
 	};
 	xhr.send();
