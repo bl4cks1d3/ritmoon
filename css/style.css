@@ -4137,8 +4137,19 @@ p.p-sm {
 
 p {
   margin-top: 0px;
-  margin-bottom: 1rem;
   font-size: 1rem;
+}
+
+.fase {
+  margin-top: 0px;
+  font-size: 0.7rem;
+}
+.item1 {
+  order: 1; /* Aparece depois */
+}
+
+.item2 {
+  order: 2; /* Aparece primeiro */
 }
 
 @media (min-width: 480px) and (max-width: 767.98px) {
